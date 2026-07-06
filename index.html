@@ -20,32 +20,89 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
   body{font-family:'Inter',sans-serif;color:#3F4756;background:#fff;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
   a{color:#1F4E9A;text-decoration:none}
   a:hover{color:#123A73}
   img{max-width:100%;height:auto;display:block}
-  p[style*="font-size:10px"],div[style*="font-size:10px"],span[style*="font-size:10px"],a[style*="font-size:10px"]{font-size:12px!important}
-  p[style*="font-size:10.5px"],div[style*="font-size:10.5px"],span[style*="font-size:10.5px"],a[style*="font-size:10.5px"]{font-size:12.5px!important}
-  p[style*="font-size:11px"],div[style*="font-size:11px"],span[style*="font-size:11px"],a[style*="font-size:11px"]{font-size:13px!important}
-  p[style*="font-size:11.5px"],div[style*="font-size:11.5px"],span[style*="font-size:11.5px"],a[style*="font-size:11.5px"]{font-size:13.5px!important}
-  p[style*="font-size:12px"],div[style*="font-size:12px"],span[style*="font-size:12px"],a[style*="font-size:12px"]{font-size:14px!important}
-  p[style*="font-size:12.5px"],div[style*="font-size:12.5px"],span[style*="font-size:12.5px"],a[style*="font-size:12.5px"]{font-size:14.5px!important}
-  p[style*="font-size:13px"],div[style*="font-size:13px"],span[style*="font-size:13px"],a[style*="font-size:13px"]{font-size:15px!important}
-  p[style*="font-size:13.5px"],div[style*="font-size:13.5px"],span[style*="font-size:13.5px"],a[style*="font-size:13.5px"]{font-size:15.5px!important}
-  p[style*="font-size:14px"],div[style*="font-size:14px"],span[style*="font-size:14px"],a[style*="font-size:14px"]{font-size:16px!important}
-  p[style*="font-size:14.5px"],div[style*="font-size:14.5px"],span[style*="font-size:14.5px"],a[style*="font-size:14.5px"]{font-size:16.5px!important}
-  p[style*="font-size:15px"],div[style*="font-size:15px"],span[style*="font-size:15px"],a[style*="font-size:15px"]{font-size:17px!important}
-  p[style*="font-size:15.5px"],div[style*="font-size:15.5px"],span[style*="font-size:15.5px"],a[style*="font-size:15.5px"]{font-size:17.5px!important}
-  li span[style*="font-size:11px"]{font-size:13px!important}
-  li span[style*="font-size:11.5px"]{font-size:13.5px!important}
-  li span[style*="font-size:12px"]{font-size:14px!important}
-  li span[style*="font-size:12.5px"]{font-size:14.5px!important}
-  li span[style*="font-size:13px"]{font-size:15px!important}
-  li span[style*="font-size:13.5px"]{font-size:15.5px!important}
-  li span[style*="font-size:14px"]{font-size:16px!important}
-  li span[style*="font-size:14.5px"]{font-size:16.5px!important}
-  li span[style*="font-size:15px"]{font-size:17px!important}
+  :root{
+    --type-body:18px;
+    --type-body-line:1.76;
+    --type-copy:17px;
+    --type-copy-line:1.7;
+    --type-list:18px;
+    --type-list-line:1.64;
+    --type-card-title:19px;
+    --type-card-title-line:1.3;
+    --type-meta:16px;
+    --type-footer:16px;
+  }
+  #hero-inner>div:first-child>p,
+  #about-inner p,
+  #implants-inner>div:first-child>p,
+  #ortho-inner>div:last-child>p,
+  #tecnologia>div>div:first-child>p,
+  #tech-inner>div:first-child>div:first-child>p,
+  #corpo-clinico>div>div:first-child>p,
+  #depoimentos>div>div:first-child>p,
+  #cta-final p,
+  #location-inner>div:last-child>p,
+  #popup-modal p{
+    font-size:var(--type-body)!important;
+    line-height:var(--type-body-line)!important;
+  }
+  .feature-list li{
+    font-size:var(--type-list)!important;
+    line-height:var(--type-list-line)!important;
+    font-weight:500!important;
+  }
+  .feature-list span{
+    font-size:inherit!important;
+    line-height:inherit!important;
+    font-weight:inherit!important;
+  }
+  #treat-featured h3{
+    font-size:19px!important;
+    line-height:1.24!important;
+  }
+  #treat-featured p{
+    font-size:var(--type-copy)!important;
+    line-height:1.68!important;
+  }
+  #treat-grid h3,
+  #diff-grid h3,
+  #team-inner h3,
+  #tech-cards h4{
+    font-size:var(--type-card-title)!important;
+    line-height:var(--type-card-title-line)!important;
+  }
+  #treat-grid p,
+  #diff-grid p,
+  #tech-cards p{
+    font-size:var(--type-copy)!important;
+    line-height:var(--type-copy-line)!important;
+  }
+  #team-inner h3+p,
+  #team-inner h3+p+p,
+  #testimonials-grid p{
+    font-size:var(--type-copy)!important;
+    line-height:1.68!important;
+  }
+  #implants-right>div:last-child>div>div:first-child{
+    font-size:19px!important;
+    line-height:1.3!important;
+  }
+  #implants-right>div:last-child>div>div:last-child{
+    font-size:17px!important;
+    line-height:1.66!important;
+  }
+  #footer-cols>div:first-child>p,
+  #footer-cols>div:nth-child(2)>div>div,
+  #footer-cols>div:nth-child(3)>div>div,
+  footer>div:last-child p{
+    font-size:var(--type-footer)!important;
+    line-height:1.6!important;
+  }
   [data-anim]{opacity:0;transform:translateY(22px);transition:opacity .72s cubic-bezier(.22,.61,.36,1),transform .72s cubic-bezier(.22,.61,.36,1)}
   [data-anim="visible"]{opacity:1;transform:translateY(0)}
   [data-anim-delay="1"]{transition-delay:.12s}
@@ -56,6 +113,21 @@
   [data-anim-delay="6"]{transition-delay:.70s}
   @media(max-width:900px){
     body{overflow-x:hidden}
+    *[style*="font-size:10px"],
+    *[style*="font-size:10.5px"],
+    *[style*="font-size:11px"],
+    *[style*="font-size:11.5px"],
+    *[style*="font-size:12px"],
+    *[style*="font-size:12.5px"],
+    *[style*="font-size:13px"],
+    *[style*="font-size:13.5px"],
+    *[style*="font-size:14px"],
+    *[style*="font-size:14.5px"],
+    *[style*="font-size:15px"],
+    *[style*="font-size:15.5px"]{
+      font-size:var(--type-meta)!important;
+      line-height:1.55!important;
+    }
     #nav-desktop{display:none!important}
     #mobile-menu-btn{display:flex!important}
     #wa-header-btn{display:none!important}
@@ -65,8 +137,11 @@
     #hero-img-col{display:block!important;flex:1 1 auto!important;width:100%!important;order:-1!important}
     #hero-img-col>div>div{border-radius:20px 20px 48px 20px!important}
     #about-inner{flex-direction:column!important}
-    #about-img-wrap{flex:none!important;width:100%!important;max-width:360px!important;height:auto!important;order:-1!important;margin:0 auto!important}
-    #about-img-wrap>div{aspect-ratio:4/5!important}
+    #about-img-wrap{flex:none!important;width:100%!important;max-width:min(100%,420px)!important;height:auto!important;order:-1!important;margin:0 auto!important}
+    #about-img-wrap>div{aspect-ratio:4/5!important;border-radius:22px 42px 22px 42px!important}
+    #about-img-wrap button{width:42px!important;height:42px!important;top:auto!important;bottom:14px!important;transform:none!important}
+    #about-img-wrap button[aria-label="Foto anterior"]{left:14px!important}
+    #about-img-wrap button[aria-label="Próxima foto"]{right:14px!important}
     #implants-inner{flex-direction:column!important}
     #implants-right{flex:none!important;width:100%!important;order:-1!important}
     #ortho-inner{flex-direction:column!important}
@@ -94,35 +169,18 @@
   }
   @media(max-width:700px){
     section{padding-left:20px!important;padding-right:20px!important}
-    body{font-size:18px!important;line-height:1.65!important}
-    p,li,span,a,button{font-size:1.1em!important;line-height:1.65!important}
-    h3,h4{font-size:calc(100% + 4px)!important;line-height:1.3!important}
-    section p{font-size:16px!important;line-height:1.7!important}
-    section li span{font-size:16px!important;line-height:1.7!important}
-    section div[style*="text-transform:uppercase"]{font-size:12.5px!important;letter-spacing:.08em!important}
     #treat-grid>div>div:first-child{width:52px!important;height:52px!important;margin:0 auto 16px!important}
     #treat-grid>div>div:first-child img{width:24px!important;height:24px!important}
     #tech-cards>div>div:first-child,#diff-grid>div>div:first-child{width:42px!important;height:42px!important}
     #tech-cards>div>div:first-child svg,#diff-grid>div>div:first-child svg{width:19px!important;height:19px!important}
-    h1{line-height:1.12!important}
-    h2{line-height:1.18!important}
-    #cred-strip .cred-card>div:nth-child(2){font-size:18px!important}
-    #cred-strip .cred-card>div:nth-child(3){font-size:17px!important;line-height:1.6!important}
-    #footer-cols div[style*="text-transform:uppercase"]{font-size:13px!important}
-    #footer-cols p,#footer-cols a,#footer-cols div[style*="line-height"]{font-size:16px!important;line-height:1.7!important}
-    #location-inner p,#location-inner a,#location-inner div{font-size:16px!important;line-height:1.7!important}
-    #implants-inner p,#implants-inner li span,#ortho-inner p,#ortho-inner div span,#tech-inner p,#diff-grid p,#team-inner p,#testimonials-grid p{font-size:16px!important;line-height:1.7!important}
-    #implants-inner h3,#ortho-inner h3,#tech-inner h3,#diff-grid h3,#team-inner h3,#testimonials-grid h3,#treat-grid h3{font-size:18px!important}
     #tech-cards>div,#diff-grid>div{text-align:center!important}
     #tech-cards>div>div:first-child,#diff-grid>div>div:first-child{margin:0 auto 12px!important}
     #tech-cards h3,#tech-cards h4,#diff-grid h3,#diff-grid h4{text-align:center!important}
     #tech-cards p,#diff-grid p{text-align:center!important}
-    #tech-cards h4{font-size:18px!important;line-height:1.35!important}
-    #tech-cards p{font-size:16px!important;line-height:1.7!important}
     #treat-featured{flex-direction:column!important}
     #treat-grid{grid-template-columns:1fr 1fr!important}
     #diff-grid{grid-template-columns:1fr 1fr!important}
-    #about-img-wrap{max-width:340px!important;height:auto!important}
+    #about-img-wrap{max-width:min(100%,400px)!important;height:auto!important}
     #implants-right>div:first-child{aspect-ratio:4/5!important;max-width:360px!important;margin-left:auto!important;margin-right:auto!important;background:rgba(255,255,255,.06)!important}
     #implants-right>div:first-child img{width:100%!important;height:100%!important;object-fit:contain!important;object-position:center center!important;display:block!important}
     #team-inner>div{max-width:360px!important;width:100%!important}
@@ -134,22 +192,12 @@
   }
   @media(max-width:480px){
     header>div{padding:0 18px!important}
-    body{font-size:19px!important;line-height:1.68!important}
-    p,li,span,a,button{font-size:1.12em!important;line-height:1.68!important}
-    h3,h4{font-size:calc(100% + 5px)!important;line-height:1.32!important}
-    section p{font-size:17px!important;line-height:1.72!important}
-    section li span{font-size:17px!important;line-height:1.72!important}
-    section div[style*="text-transform:uppercase"]{font-size:13px!important;letter-spacing:.08em!important}
     #treat-grid>div>div:first-child{width:56px!important;height:56px!important;margin:0 auto 16px!important}
     #treat-grid>div>div:first-child img{width:26px!important;height:26px!important}
     #tech-cards>div>div:first-child,#diff-grid>div>div:first-child{width:46px!important;height:46px!important}
     #tech-cards>div>div:first-child svg,#diff-grid>div>div:first-child svg{width:20px!important;height:20px!important}
-    #cred-strip .cred-card>div:nth-child(2){font-size:19px!important}
-    #cred-strip .cred-card>div:nth-child(3){font-size:17px!important;line-height:1.65!important}
     #tech-cards>div,#diff-grid>div{text-align:center!important}
     #tech-cards>div>div:first-child,#diff-grid>div>div:first-child{margin:0 auto 12px!important}
-    #tech-cards h4{font-size:18px!important;line-height:1.36!important}
-    #tech-cards p{font-size:16.5px!important;line-height:1.72!important}
     #treat-grid{grid-template-columns:1fr!important}
     #diff-grid{grid-template-columns:1fr!important}
     #tech-cards{grid-template-columns:1fr!important}
@@ -157,7 +205,10 @@
     .cred-card{width:100%!important}
     #hero-inner{padding:34px 18px!important;gap:28px!important}
     #hero-img-col{width:100%!important}
-    #about-img-wrap{max-width:320px!important;height:auto!important}
+    #about-inner{gap:32px!important}
+    #about-img-wrap{max-width:100%!important;height:auto!important}
+    #about-img-wrap>div{aspect-ratio:3/4!important;border-radius:20px 30px 20px 30px!important}
+    #about-img-wrap button{width:40px!important;height:40px!important;bottom:12px!important}
     #ortho-left{height:auto!important}
     #tech-right{height:auto!important}
     #implants-right>div:first-child{aspect-ratio:4/5!important}
@@ -647,7 +698,7 @@
          style="font-size:14.5px;color:rgba(255,255,255,.78);line-height:1.76;margin-bottom:26px;text-wrap:pretty;">
         Na BIO, o tratamento com implantes é planejado de forma individualizada, considerando a saúde bucal, a estrutura óssea, as necessidades funcionais e os objetivos de cada paciente. A clínica trabalha com tecnologia, avaliação cuidadosa e marcas reconhecidas para oferecer mais previsibilidade ao tratamento.
       </p>
-      <ul data-anim="" data-anim-delay="3" style="list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:30px;">
+      <ul class="feature-list" data-anim="" data-anim-delay="3" style="list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:30px;">
         <li style="display:flex;align-items:center;gap:10px;"><div style="width:19px;height:19px;border-radius:50%;background:rgba(255,255,255,.11);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span style="font-size:13.5px;color:rgba(255,255,255,.85);">Planejamento individualizado para cada caso</span></li>
         <li style="display:flex;align-items:center;gap:10px;"><div style="width:19px;height:19px;border-radius:50%;background:rgba(255,255,255,.11);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span style="font-size:13.5px;color:rgba(255,255,255,.85);">Avaliação cuidadosa de saúde bucal e estrutura óssea</span></li>
         <li style="display:flex;align-items:center;gap:10px;"><div style="width:19px;height:19px;border-radius:50%;background:rgba(255,255,255,.11);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span style="font-size:13.5px;color:rgba(255,255,255,.85);">Tecnologia para procedimentos mais precisos</span></li>
@@ -700,13 +751,13 @@
          style="font-size:14.5px;color:#5A6478;line-height:1.76;margin-bottom:26px;text-wrap:pretty;">
         O tratamento ortodôntico contribui para o alinhamento dos dentes, melhora da função mastigatória, estética do sorriso e saúde bucal. Na BIO, cada caso é avaliado individualmente para definir o planejamento mais adequado, com acompanhamento próximo durante toda a jornada.
       </p>
-      <div data-anim="" data-anim-delay="3" style="display:flex;flex-direction:column;gap:9px;margin-bottom:30px;">
-        <div style="display:flex;align-items:center;gap:10px;"><div style="width:19px;height:19px;border-radius:50%;background:rgba(31,78,154,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#1F4E9A" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span style="font-size:13.5px;color:#3F4756;">Avaliação ortodôntica individualizada</span></div>
-        <div style="display:flex;align-items:center;gap:10px;"><div style="width:19px;height:19px;border-radius:50%;background:rgba(31,78,154,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#1F4E9A" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span style="font-size:13.5px;color:#3F4756;">Planejamento personalizado</span></div>
-        <div style="display:flex;align-items:center;gap:10px;"><div style="width:19px;height:19px;border-radius:50%;background:rgba(31,78,154,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#1F4E9A" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span style="font-size:13.5px;color:#3F4756;">Acompanhamento próximo em toda a jornada</span></div>
-        <div style="display:flex;align-items:center;gap:10px;"><div style="width:19px;height:19px;border-radius:50%;background:rgba(31,78,154,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#1F4E9A" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span style="font-size:13.5px;color:#3F4756;">Melhora da função, estética e saúde bucal</span></div>
-        <div style="display:flex;align-items:center;gap:10px;"><div style="width:19px;height:19px;border-radius:50%;background:rgba(31,78,154,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#1F4E9A" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span style="font-size:13.5px;color:#3F4756;">Indicado para diferentes fases da vida, conforme avaliação</span></div>
-      </div>
+      <ul class="feature-list" data-anim="" data-anim-delay="3" style="list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:30px;">
+        <li style="display:flex;align-items:center;gap:10px;"><div style="width:19px;height:19px;border-radius:50%;background:rgba(31,78,154,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#1F4E9A" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span style="font-size:13.5px;color:#3F4756;">Avaliação ortodôntica individualizada</span></li>
+        <li style="display:flex;align-items:center;gap:10px;"><div style="width:19px;height:19px;border-radius:50%;background:rgba(31,78,154,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#1F4E9A" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span style="font-size:13.5px;color:#3F4756;">Planejamento personalizado</span></li>
+        <li style="display:flex;align-items:center;gap:10px;"><div style="width:19px;height:19px;border-radius:50%;background:rgba(31,78,154,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#1F4E9A" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span style="font-size:13.5px;color:#3F4756;">Acompanhamento próximo em toda a jornada</span></li>
+        <li style="display:flex;align-items:center;gap:10px;"><div style="width:19px;height:19px;border-radius:50%;background:rgba(31,78,154,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#1F4E9A" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span style="font-size:13.5px;color:#3F4756;">Melhora da função, estética e saúde bucal</span></li>
+        <li style="display:flex;align-items:center;gap:10px;"><div style="width:19px;height:19px;border-radius:50%;background:rgba(31,78,154,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#1F4E9A" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span style="font-size:13.5px;color:#3F4756;">Indicado para diferentes fases da vida, conforme avaliação</span></li>
+      </ul>
       <a href="{{ waUrl }}" target="_blank" rel="noopener" data-anim="" data-anim-delay="4"
          style="display:inline-flex;align-items:center;gap:9px;background:#25D366;color:#fff;font-size:14.5px;font-weight:700;padding:13px 22px;border-radius:100px;transition:all .22s;box-shadow:0 4px 16px rgba(37,211,102,.26);"
          style-hover="background:#1EBE5D;transform:translateY(-2px);box-shadow:0 8px 22px rgba(37,211,102,.40);">
