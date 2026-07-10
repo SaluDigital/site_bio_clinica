@@ -113,14 +113,14 @@
     font-size:var(--type-footer)!important;
     line-height:1.6!important;
   }
-  [data-anim]{opacity:0;transform:translateY(22px);transition:opacity .72s cubic-bezier(.22,.61,.36,1),transform .72s cubic-bezier(.22,.61,.36,1)}
+  [data-anim]{opacity:0;transform:translateY(14px);transition:opacity .42s cubic-bezier(.22,.61,.36,1),transform .42s cubic-bezier(.22,.61,.36,1)}
   [data-anim="visible"]{opacity:1;transform:translateY(0)}
-  [data-anim-delay="1"]{transition-delay:.12s}
-  [data-anim-delay="2"]{transition-delay:.22s}
-  [data-anim-delay="3"]{transition-delay:.34s}
-  [data-anim-delay="4"]{transition-delay:.46s}
-  [data-anim-delay="5"]{transition-delay:.58s}
-  [data-anim-delay="6"]{transition-delay:.70s}
+  [data-anim-delay="1"]{transition-delay:.06s}
+  [data-anim-delay="2"]{transition-delay:.12s}
+  [data-anim-delay="3"]{transition-delay:.18s}
+  [data-anim-delay="4"]{transition-delay:.24s}
+  [data-anim-delay="5"]{transition-delay:.30s}
+  [data-anim-delay="6"]{transition-delay:.36s}
   @media(max-width:900px){
     body{overflow-x:hidden}
     *[style*="text-transform:uppercase"]{
@@ -194,8 +194,6 @@
     #implants-right>div:first-child{aspect-ratio:4/5!important;max-width:360px!important;margin-left:auto!important;margin-right:auto!important;background:rgba(255,255,255,.06)!important}
     #implants-right>div:first-child img{width:100%!important;height:100%!important;object-fit:contain!important;object-position:center center!important;display:block!important}
     #team-inner>div{max-width:360px!important;width:100%!important}
-    #team-inner>div>div:first-child{aspect-ratio:4/5!important;min-height:320px!important}
-    #team-inner>div>div:first-child img{width:100%!important;height:100%!important;object-fit:contain!important;object-position:center center!important;display:block!important;background:#EAF2FF!important}
     #footer-cols>div{min-width:100%!important;flex:1 1 100%!important}
     #footer-cols,#footer-cols>div{text-align:center!important;align-items:center!important;justify-content:center!important}
     #footer-cols p,#footer-cols div,#footer-cols a{margin-left:auto!important;margin-right:auto!important;text-align:center!important}
@@ -222,7 +220,6 @@
     #ortho-left{height:auto!important}
     #tech-right{height:auto!important}
     #implants-right>div:first-child{aspect-ratio:4/5!important}
-    #team-inner>div>div:first-child{aspect-ratio:4/5!important;min-height:300px!important;background:#EAF2FF!important}
     #depoimentos button[aria-label="Depoimento anterior"],#depoimentos button[aria-label="Próximo depoimento"]{width:42px!important;height:42px!important;bottom:-52px!important}
     #footer-cols{gap:28px!important}
     #footer-cols>div:first-child>div{justify-content:center!important}
@@ -235,7 +232,7 @@
 <header style="{{ headerStyle }}">
   <div style="max-width:1160px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;">
     <a href="#inicio" onClick="{{ closeMenu }}" style="display:flex;align-items:center;line-height:0;flex-shrink:0;">
-      <img src="assets/logo.webp" alt="BIO Clínica Odontológica" style="height:58px;width:auto;">
+      <img src="assets/logo.webp" alt="BIO Clínica Odontológica" decoding="async" fetchpriority="high" width="202" height="58" style="height:58px;width:auto;">
     </a>
     <nav id="nav-desktop" style="display:flex;align-items:center;gap:20px;flex:1;justify-content:center;">
       <a href="#inicio" style="font-size:15px;font-weight:500;color:#3F4756;white-space:nowrap;transition:color .2s;" style-hover="color:#1F4E9A;">Início</a>
@@ -347,8 +344,8 @@
     <div id="hero-img-col" data-anim="" data-anim-delay="2" style="flex:0 0 420px;">
       <div style="position:relative;">
         <div style="width:100%;aspect-ratio:4/5;background:linear-gradient(145deg,#EEF5FF 0%,#D5E5FA 55%,#E4EEF9 100%);border-radius:22px 22px 80px 22px;overflow:hidden;position:relative;box-shadow:0 18px 45px rgba(18,58,115,.14);">
-          <video id="hero-video" autoplay="" muted="" loop="" playsinline="" preload="auto" style="width:100%;height:100%;object-fit:cover;display:block;" aria-label="Vídeo institucional da BIO Clínica Odontológica">
-            <source src="assets/sobre.mp4" type="video/mp4">
+          <video id="hero-video" autoplay="" muted="" loop="" playsinline="" preload="none" poster="assets/sobre1.webp" width="420" height="525" style="width:100%;height:100%;object-fit:cover;display:block;" aria-label="Vídeo institucional da BIO Clínica Odontológica">
+            <source data-src="assets/sobre.mp4" type="video/mp4">
           </video>
           <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(16,50,100,.12) 0%,rgba(31,78,154,.04) 35%,rgba(255,255,255,0) 58%,rgba(8,29,59,.24) 100%);pointer-events:none;"></div>
           <div style="position:absolute;inset:0;background:radial-gradient(circle at 18% 20%,rgba(255,255,255,.18) 0%,transparent 34%),radial-gradient(circle at 82% 82%,rgba(17,58,115,.22) 0%,transparent 36%);pointer-events:none;"></div>
@@ -406,15 +403,15 @@
     <div id="about-img-wrap" data-anim="" data-anim-delay="2" style="flex:0 0 360px;height:420px;">
       <div style="width:100%;height:100%;background:linear-gradient(145deg,#EEF5FF,#D6E4FA);border-radius:18px 64px 18px 64px;overflow:hidden;position:relative;box-shadow:0 18px 42px rgba(18,58,115,.14);">
         <div style="{{ aboutCarouselTrackStyle }}">
-          <img src="assets/sobre1.webp" alt="Ambiente da BIO Clínica Odontológica 1" style="width:100%;height:100%;object-fit:cover;flex:0 0 100%;">
-          <img src="assets/sobre2.webp" alt="Ambiente da BIO Clínica Odontológica 2" style="width:100%;height:100%;object-fit:cover;flex:0 0 100%;">
-          <img src="assets/sobre3.webp" alt="Ambiente da BIO Clínica Odontológica 3" style="width:100%;height:100%;object-fit:cover;flex:0 0 100%;">
-          <img src="assets/sobre4.webp" alt="Ambiente da BIO Clínica Odontológica 4" style="width:100%;height:100%;object-fit:cover;flex:0 0 100%;">
-          <img src="assets/sobre5.webp" alt="Ambiente da BIO Clínica Odontológica 5" style="width:100%;height:100%;object-fit:cover;flex:0 0 100%;">
-          <img src="assets/sobre6.webp" alt="Ambiente da BIO Clínica Odontológica 6" style="width:100%;height:100%;object-fit:cover;flex:0 0 100%;">
-          <img src="assets/sobre7.webp" alt="Ambiente da BIO Clínica Odontológica 7" style="width:100%;height:100%;object-fit:cover;flex:0 0 100%;">
-          <img src="assets/sobre8.webp" alt="Ambiente da BIO Clínica Odontológica 8" style="width:100%;height:100%;object-fit:cover;flex:0 0 100%;">
-          <img src="assets/sobre9.webp" alt="Ambiente da BIO Clínica Odontológica 9" style="width:100%;height:100%;object-fit:cover;flex:0 0 100%;">
+          <img src="assets/sobre1.webp" alt="Ambiente da BIO Clínica Odontológica 1" loading="lazy" decoding="async" width="360" height="420" style="width:100%;height:100%;object-fit:cover;flex:0 0 100%;">
+          <img src="assets/sobre2.webp" alt="Ambiente da BIO Clínica Odontológica 2" loading="lazy" decoding="async" width="360" height="420" style="width:100%;height:100%;object-fit:cover;flex:0 0 100%;">
+          <img src="assets/sobre3.webp" alt="Ambiente da BIO Clínica Odontológica 3" loading="lazy" decoding="async" width="360" height="420" style="width:100%;height:100%;object-fit:cover;flex:0 0 100%;">
+          <img src="assets/sobre4.webp" alt="Ambiente da BIO Clínica Odontológica 4" loading="lazy" decoding="async" width="360" height="420" style="width:100%;height:100%;object-fit:cover;flex:0 0 100%;">
+          <img src="assets/sobre5.webp" alt="Ambiente da BIO Clínica Odontológica 5" loading="lazy" decoding="async" width="360" height="420" style="width:100%;height:100%;object-fit:cover;flex:0 0 100%;">
+          <img src="assets/sobre6.webp" alt="Ambiente da BIO Clínica Odontológica 6" loading="lazy" decoding="async" width="360" height="420" style="width:100%;height:100%;object-fit:cover;flex:0 0 100%;">
+          <img src="assets/sobre7.webp" alt="Ambiente da BIO Clínica Odontológica 7" loading="lazy" decoding="async" width="360" height="420" style="width:100%;height:100%;object-fit:cover;flex:0 0 100%;">
+          <img src="assets/sobre8.webp" alt="Ambiente da BIO Clínica Odontológica 8" loading="lazy" decoding="async" width="360" height="420" style="width:100%;height:100%;object-fit:cover;flex:0 0 100%;">
+          <img src="assets/sobre9.webp" alt="Ambiente da BIO Clínica Odontológica 9" loading="lazy" decoding="async" width="360" height="420" style="width:100%;height:100%;object-fit:cover;flex:0 0 100%;">
         </div>
         <button onClick="{{ prevAboutSlide }}" aria-label="Foto anterior"
                 style="position:absolute;left:14px;top:50%;transform:translateY(-50%);width:40px;height:40px;border:none;border-radius:50%;background:rgba(255,255,255,.84);backdrop-filter:blur(8px);color:#123A73;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 8px 20px rgba(18,58,115,.16);">
@@ -477,7 +474,7 @@
         <div style="position:absolute;top:-28px;right:-28px;width:140px;height:140px;border-radius:50%;background:rgba(255,255,255,.05);pointer-events:none;"></div>
         <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:14px;">
           <div style="width:44px;height:44px;border-radius:11px;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-            <img src="assets/009-implants.svg" alt="" aria-hidden="true" style="width:20px;height:20px;object-fit:contain;filter:brightness(0) invert(1);">
+            <img src="assets/009-implants.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" width="20" height="20" style="width:20px;height:20px;object-fit:contain;filter:brightness(0) invert(1);">
           </div>
           <span style="font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.6);background:rgba(255,255,255,.1);padding:4px 10px;border-radius:100px;">Destaque</span>
         </div>
@@ -493,7 +490,7 @@
         <div style="position:absolute;top:-28px;right:-28px;width:140px;height:140px;border-radius:50%;background:rgba(31,78,154,.04);pointer-events:none;"></div>
         <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:14px;">
           <div style="width:44px;height:44px;border-radius:11px;background:rgba(31,78,154,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-            <img src="assets/009-brace.svg" alt="" aria-hidden="true" style="width:20px;height:20px;object-fit:contain;">
+            <img src="assets/009-brace.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" width="20" height="20" style="width:20px;height:20px;object-fit:contain;">
           </div>
           <span style="font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#1F4E9A;background:rgba(31,78,154,.09);padding:4px 10px;border-radius:100px;">Destaque</span>
         </div>
@@ -511,7 +508,7 @@
 
       <div data-anim="" style="background:#fff;border:1px solid rgba(31,78,154,.09);border-radius:12px;padding:20px;transition:all .22s;" style-hover="border-color:rgba(31,78,154,.22);box-shadow:0 6px 18px rgba(18,58,115,.07);transform:translateY(-2px);">
         <div style="width:54px;height:54px;border-radius:12px;background:#F0F5FF;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;">
-          <img src="assets/019-chair.svg" alt="" aria-hidden="true" style="width:28px;height:28px;object-fit:contain;">
+          <img src="assets/019-chair.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" width="28" height="28" style="width:28px;height:28px;object-fit:contain;">
         </div>
         <h3 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:17px;font-weight:700;color:#123A73;margin-bottom:10px;text-align:center;">Cirurgias Odontológicas</h3>
         <p style="font-size:15px;color:#7A8499;line-height:1.65;text-align:center;">Procedimentos com planejamento cuidadoso e tecnologia adequada para cada caso.</p>
@@ -519,7 +516,7 @@
 
       <div data-anim="" data-anim-delay="1" style="background:#fff;border:1px solid rgba(31,78,154,.09);border-radius:12px;padding:20px;transition:all .22s;" style-hover="border-color:rgba(31,78,154,.22);box-shadow:0 6px 18px rgba(18,58,115,.07);transform:translateY(-2px);">
         <div style="width:54px;height:54px;border-radius:12px;background:#F0F5FF;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;">
-          <img src="assets/010-smile.svg" alt="" aria-hidden="true" style="width:28px;height:28px;object-fit:contain;">
+          <img src="assets/010-smile.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" width="28" height="28" style="width:28px;height:28px;object-fit:contain;">
         </div>
         <h3 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:17px;font-weight:700;color:#123A73;margin-bottom:10px;text-align:center;">Periodontia</h3>
         <p style="font-size:15px;color:#7A8499;line-height:1.65;text-align:center;">Cuidado das gengivas e estruturas de suporte dos dentes, essenciais para a saúde bucal.</p>
@@ -527,7 +524,7 @@
 
       <div data-anim="" data-anim-delay="2" style="background:#fff;border:1px solid rgba(31,78,154,.09);border-radius:12px;padding:20px;transition:all .22s;" style-hover="border-color:rgba(31,78,154,.22);box-shadow:0 6px 18px rgba(18,58,115,.07);transform:translateY(-2px);">
         <div style="width:54px;height:54px;border-radius:12px;background:#F0F5FF;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;">
-          <img src="assets/004-dentist.svg" alt="" aria-hidden="true" style="width:28px;height:28px;object-fit:contain;">
+          <img src="assets/004-dentist.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" width="28" height="28" style="width:28px;height:28px;object-fit:contain;">
         </div>
         <h3 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:17px;font-weight:700;color:#123A73;margin-bottom:10px;text-align:center;">Clínica Geral</h3>
         <p style="font-size:15px;color:#7A8499;line-height:1.65;text-align:center;">Avaliação, diagnóstico e acompanhamento odontológico geral para toda a família.</p>
@@ -535,7 +532,7 @@
 
       <div data-anim="" style="background:#fff;border:1px solid rgba(31,78,154,.09);border-radius:12px;padding:20px;transition:all .22s;" style-hover="border-color:rgba(31,78,154,.22);box-shadow:0 6px 18px rgba(18,58,115,.07);transform:translateY(-2px);">
         <div style="width:54px;height:54px;border-radius:12px;background:#F0F5FF;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;">
-          <img src="assets/006-tooth-5.svg" alt="" aria-hidden="true" style="width:28px;height:28px;object-fit:contain;">
+          <img src="assets/006-tooth-5.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" width="28" height="28" style="width:28px;height:28px;object-fit:contain;">
         </div>
         <h3 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:17px;font-weight:700;color:#123A73;margin-bottom:10px;text-align:center;">Limpeza e Profilaxia</h3>
         <p style="font-size:15px;color:#7A8499;line-height:1.65;text-align:center;">Prevenção e manutenção da saúde bucal com higienização profissional periódica.</p>
@@ -543,7 +540,7 @@
 
       <div data-anim="" data-anim-delay="1" style="background:#fff;border:1px solid rgba(31,78,154,.09);border-radius:12px;padding:20px;transition:all .22s;" style-hover="border-color:rgba(31,78,154,.22);box-shadow:0 6px 18px rgba(18,58,115,.07);transform:translateY(-2px);">
         <div style="width:54px;height:54px;border-radius:12px;background:#F0F5FF;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;">
-          <img src="assets/005-broken-tooth.svg" alt="" aria-hidden="true" style="width:28px;height:28px;object-fit:contain;">
+          <img src="assets/005-broken-tooth.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" width="28" height="28" style="width:28px;height:28px;object-fit:contain;">
         </div>
         <h3 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:17px;font-weight:700;color:#123A73;margin-bottom:10px;text-align:center;">Restaurações</h3>
         <p style="font-size:15px;color:#7A8499;line-height:1.65;text-align:center;">Recuperação de dentes comprometidos com materiais de qualidade e acabamento cuidadoso.</p>
@@ -551,7 +548,7 @@
 
       <div data-anim="" data-anim-delay="2" style="background:#fff;border:1px solid rgba(31,78,154,.09);border-radius:12px;padding:20px;transition:all .22s;" style-hover="border-color:rgba(31,78,154,.22);box-shadow:0 6px 18px rgba(18,58,115,.07);transform:translateY(-2px);">
         <div style="width:54px;height:54px;border-radius:12px;background:#F0F5FF;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;">
-          <img src="assets/018-dental-4.svg" alt="" aria-hidden="true" style="width:28px;height:28px;object-fit:contain;">
+          <img src="assets/018-dental-4.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" width="28" height="28" style="width:28px;height:28px;object-fit:contain;">
         </div>
         <h3 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:17px;font-weight:700;color:#123A73;margin-bottom:10px;text-align:center;">Facetas</h3>
         <p style="font-size:15px;color:#7A8499;line-height:1.65;text-align:center;">Lâminas finas para melhorar forma, cor e harmonia estética do sorriso.</p>
@@ -559,7 +556,7 @@
 
       <div data-anim="" style="background:#fff;border:1px solid rgba(31,78,154,.09);border-radius:12px;padding:20px;transition:all .22s;" style-hover="border-color:rgba(31,78,154,.22);box-shadow:0 6px 18px rgba(18,58,115,.07);transform:translateY(-2px);">
         <div style="width:54px;height:54px;border-radius:12px;background:#F0F5FF;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;">
-          <img src="assets/093-tooth-12.svg" alt="" aria-hidden="true" style="width:28px;height:28px;object-fit:contain;">
+          <img src="assets/093-tooth-12.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" width="28" height="28" style="width:28px;height:28px;object-fit:contain;">
         </div>
         <h3 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:17px;font-weight:700;color:#123A73;margin-bottom:10px;text-align:center;">Placa para Bruxismo</h3>
         <p style="font-size:15px;color:#7A8499;line-height:1.65;text-align:center;">Proteção personalizada para quem range ou aperta os dentes durante o sono.</p>
@@ -567,7 +564,7 @@
 
       <div data-anim="" data-anim-delay="1" style="background:#fff;border:1px solid rgba(31,78,154,.09);border-radius:12px;padding:20px;transition:all .22s;" style-hover="border-color:rgba(31,78,154,.22);box-shadow:0 6px 18px rgba(18,58,115,.07);transform:translateY(-2px);">
         <div style="width:54px;height:54px;border-radius:12px;background:#F0F5FF;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;">
-          <img src="assets/030-tooth-2.svg" alt="" aria-hidden="true" style="width:28px;height:28px;object-fit:contain;">
+          <img src="assets/030-tooth-2.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" width="28" height="28" style="width:28px;height:28px;object-fit:contain;">
         </div>
         <h3 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:17px;font-weight:700;color:#123A73;margin-bottom:10px;text-align:center;">Tratamento de Canal</h3>
         <p style="font-size:15px;color:#7A8499;line-height:1.65;text-align:center;">Tratamento endodôntico para salvar dentes comprometidos e eliminar infecções.</p>
@@ -575,7 +572,7 @@
 
       <div data-anim="" data-anim-delay="2" style="background:#fff;border:1px solid rgba(31,78,154,.09);border-radius:12px;padding:20px;transition:all .22s;" style-hover="border-color:rgba(31,78,154,.22);box-shadow:0 6px 18px rgba(18,58,115,.07);transform:translateY(-2px);">
         <div style="width:54px;height:54px;border-radius:12px;background:#F0F5FF;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;">
-          <img src="assets/029-smiling.svg" alt="" aria-hidden="true" style="width:28px;height:28px;object-fit:contain;">
+          <img src="assets/029-smiling.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" width="28" height="28" style="width:28px;height:28px;object-fit:contain;">
         </div>
         <h3 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:17px;font-weight:700;color:#123A73;margin-bottom:10px;text-align:center;">Estomatologia</h3>
         <p style="font-size:15px;color:#7A8499;line-height:1.65;text-align:center;">Diagnóstico e tratamento de lesões na boca, lábios e mucosas com acompanhamento especializado.</p>
@@ -595,7 +592,7 @@
         <div style="width:28px;height:2px;background:#1F4E9A;border-radius:2px;"></div>
       </div>
       <div data-anim="" data-anim-delay="1" style="margin-bottom:16px;">
-        <img src="assets/google.webp" alt="Avaliações no Google" style="height:42px;width:auto;display:inline-block;">
+        <img src="assets/google.webp" alt="Avaliações no Google" loading="lazy" decoding="async" width="160" height="42" style="height:42px;width:auto;display:inline-block;">
       </div>
       <h2 data-anim="" data-anim-delay="1"
           style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(24px,2.8vw,34px);font-weight:800;color:#123A73;letter-spacing:-.018em;margin-bottom:12px;">
@@ -725,7 +722,7 @@
 
     <div id="implants-right" data-anim="" data-anim-delay="2" style="flex:0 0 340px;">
       <div style="width:100%;aspect-ratio:3/4;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.11);border-radius:16px;overflow:hidden;margin-bottom:18px;">
-        <img src="assets/implante-site.webp" alt="Procedimento de implante dentário" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <img src="assets/implante-site.webp" alt="Procedimento de implante dentário" loading="lazy" decoding="async" width="340" height="453" style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
       <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);border-radius:12px;padding:14px 18px;display:flex;align-items:center;gap:14px;">
         <div>
@@ -744,7 +741,7 @@
 
     <div id="ortho-left" data-anim="" style="flex:0 0 360px;height:460px;">
       <div style="width:100%;height:100%;background:linear-gradient(145deg,#D6E4FA,#C0D5F2);border-radius:60px 16px 60px 16px;overflow:hidden;">
-        <img src="assets/orto-site.webp" alt="Atendimento ortodôntico" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <img src="assets/orto-site.webp" alt="Atendimento ortodôntico" loading="lazy" decoding="async" width="360" height="460" style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
     </div>
 
@@ -839,7 +836,7 @@
 
       <div id="tech-right" data-anim="" style="flex:0 0 340px;height:400px;">
         <div style="width:100%;height:100%;background:linear-gradient(145deg,#EEF5FF,#D6E4FA);border-radius:16px;overflow:hidden;">
-          <img src="assets/piezo-site.webp" alt="Equipamento piezo ultrassônico" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <img src="assets/piezo-site.webp" alt="Equipamento piezo ultrassônico" loading="lazy" decoding="async" width="340" height="400" style="width:100%;height:100%;object-fit:cover;display:block;">
         </div>
       </div>
 
@@ -937,10 +934,6 @@
     <div id="team-inner" style="display:flex;gap:22px;justify-content:center;flex-wrap:wrap;">
 
       <div data-anim="" style="flex:1;min-width:260px;max-width:320px;background:#fff;border:1px solid rgba(31,78,154,.09);border-radius:16px;overflow:hidden;transition:all .25s;" style-hover="transform:translateY(-4px);box-shadow:0 12px 32px rgba(18,58,115,.10);">
-        <div style="width:100%;aspect-ratio:1/1;background:linear-gradient(145deg,#EEF5FF,#D6E4FA);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#1F4E9A" stroke-width="1.2" style="opacity:.35;"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-          <span style="font-size:11px;color:#1F4E9A;opacity:.45;font-weight:500;">Foto do profissional</span>
-        </div>
         <div style="padding:20px 18px;">
           <div style="display:inline-block;background:#EEF5FF;color:#1F4E9A;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 11px;border-radius:100px;margin-bottom:10px;">Fundador</div>
           <h3 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:17px;font-weight:800;color:#123A73;margin-bottom:6px;">Dr. Cláudio Tadiello Dias</h3>
@@ -950,26 +943,18 @@
       </div>
 
       <div data-anim="" data-anim-delay="1" style="flex:1;min-width:260px;max-width:320px;background:#fff;border:1px solid rgba(31,78,154,.09);border-radius:16px;overflow:hidden;transition:all .25s;" style-hover="transform:translateY(-4px);box-shadow:0 12px 32px rgba(18,58,115,.10);">
-        <div style="width:100%;aspect-ratio:1/1;background:linear-gradient(145deg,#EEF5FF,#D6E4FA);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#1F4E9A" stroke-width="1.2" style="opacity:.35;"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-          <span style="font-size:11px;color:#1F4E9A;opacity:.45;font-weight:500;">Foto do profissional</span>
-        </div>
         <div style="padding:20px 18px;">
           <div style="display:inline-block;background:#EEF5FF;color:#1F4E9A;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 11px;border-radius:100px;margin-bottom:10px;">Implantodontia</div>
-          <h3 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:17px;font-weight:800;color:#123A73;margin-bottom:6px;">Dr. Arthur</h3>
+          <h3 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:17px;font-weight:800;color:#123A73;margin-bottom:6px;">Arthur Diniz Vial</h3>
           <p style="font-size:13.5px;color:#1F4E9A;font-weight:600;margin-bottom:10px;">Implantodontia · Cirurgias Orais</p>
           <p style="font-size:14px;color:#7A8499;line-height:1.68;margin-bottom:0;">Atua com implantodontia e cirurgias orais. Possui experiência na Prefeitura de Belo Horizonte e integra o corpo clínico do Hospital Orizonte.</p>
         </div>
       </div>
 
       <div data-anim="" data-anim-delay="2" style="flex:1;min-width:260px;max-width:320px;background:#fff;border:1px solid rgba(31,78,154,.09);border-radius:16px;overflow:hidden;transition:all .25s;" style-hover="transform:translateY(-4px);box-shadow:0 12px 32px rgba(18,58,115,.10);">
-        <div style="width:100%;aspect-ratio:1/1;background:linear-gradient(145deg,#EEF5FF,#D6E4FA);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#1F4E9A" stroke-width="1.2" style="opacity:.35;"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-          <span style="font-size:11px;color:#1F4E9A;opacity:.45;font-weight:500;">Foto do profissional</span>
-        </div>
         <div style="padding:20px 18px;">
           <div style="display:inline-block;background:#EEF5FF;color:#1F4E9A;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 11px;border-radius:100px;margin-bottom:10px;">Tecnologia Odontológica</div>
-          <h3 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:17px;font-weight:800;color:#123A73;margin-bottom:6px;">Dr. Marco</h3>
+          <h3 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:17px;font-weight:800;color:#123A73;margin-bottom:6px;">Marco Antônio F. Morais</h3>
           <p style="font-size:13.5px;color:#1F4E9A;font-weight:600;margin-bottom:10px;">Tecnologia Odontológica</p>
           <p style="font-size:14px;color:#7A8499;line-height:1.68;margin-bottom:0;">Formação em tecnologia da informação com atuação relacionada à tecnologia odontológica aplicada à clínica.</p>
         </div>
@@ -980,7 +965,7 @@
 </section>
 
 <!-- â•â•â• CTA INTERMEDIÃRIO â•â•â• -->
-<section id="cta-final" style="background:#1F4E9A url('assets/fundo-call.webp') center center / cover no-repeat fixed;padding:110px 24px;position:relative;overflow:hidden;">
+<section id="cta-final" style="background:#1F4E9A url('assets/fundo-call.webp') center center / cover no-repeat;padding:110px 24px;position:relative;overflow:hidden;">
   <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,58,115,.72) 0%,rgba(18,58,115,.82) 100%);pointer-events:none;"></div>
   <div style="position:absolute;top:0;right:0;width:380px;height:380px;border-radius:50%;background:rgba(255,255,255,.04);transform:translate(30%,-30%);pointer-events:none;"></div>
   <div style="position:absolute;bottom:0;left:10%;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,.03);pointer-events:none;"></div>
@@ -1080,7 +1065,7 @@
 
     <div style="flex:1.4;min-width:200px;">
       <div style="display:inline-flex;align-items:center;justify-content:center;background:rgba(255,255,255,.96);padding:12px 16px;border-radius:18px;margin-bottom:14px;box-shadow:0 12px 28px rgba(0,0,0,.12);">
-        <img src="assets/logo.webp" alt="BIO Clínica Odontológica" style="height:56px;width:auto;display:block;">
+        <img src="assets/logo.webp" alt="BIO Clínica Odontológica" loading="lazy" decoding="async" width="196" height="56" style="height:56px;width:auto;display:block;">
       </div>
       <p style="font-size:12.5px;color:rgba(255,255,255,.5);line-height:1.72;max-width:240px;">
         Clínica odontológica completa no Barreiro, Belo Horizonte/MG. Implantes, ortodontia e atendimento humanizado.
@@ -1127,7 +1112,26 @@ class Component extends DCLogic {
       heroVideo.muted = true;
       heroVideo.loop = true;
       const playVideo = () => heroVideo.play().catch(() => {});
-      playVideo();
+      const loadHeroVideo = () => {
+        const source = heroVideo.querySelector('source[data-src]');
+        if (source && !source.getAttribute('src')) {
+          source.setAttribute('src', source.getAttribute('data-src'));
+          heroVideo.load();
+        }
+        playVideo();
+      };
+      const scheduleHeroVideo = () => {
+        if ('requestIdleCallback' in window) {
+          window.requestIdleCallback(loadHeroVideo, { timeout: 1800 });
+        } else {
+          window.setTimeout(loadHeroVideo, 900);
+        }
+      };
+      if (document.readyState === 'complete') {
+        scheduleHeroVideo();
+      } else {
+        window.addEventListener('load', scheduleHeroVideo, { once: true });
+      }
       heroVideo.addEventListener('loadeddata', playVideo, { once: true });
       heroVideo.addEventListener('ended', () => {
         heroVideo.currentTime = 0;
@@ -1301,6 +1305,6 @@ class Component extends DCLogic {
   }
 }
 </script>
-<script src="https://plugin.sellbot.tech/assets/js/sellbot_plugin.min.js"></script>
+<script src="https://plugin.sellbot.tech/assets/js/sellbot_plugin.min.js" defer></script>
 </body>
 </html>
